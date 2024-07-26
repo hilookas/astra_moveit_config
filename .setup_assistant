@@ -7,7 +7,7 @@ moveit_setup_assistant_config:
   package_settings:
     author_name: lookas
     author_email: i@18kas.com
-    generated_timestamp: 1721920587
+    generated_timestamp: 1721978713
   control_xacro:
     command:
       - position

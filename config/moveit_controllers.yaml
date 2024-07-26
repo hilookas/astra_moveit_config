@@ -4,10 +4,10 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 
 moveit_simple_controller_manager:
   controller_names:
-    - astra_right_controller
+    - astra_right_arm_controller
     - astra_right_hand_controller
 
-  astra_right_controller:
+  astra_right_arm_controller:
     type: FollowJointTrajectory
     action_ns: follow_joint_trajectory
     default: true
@@ -22,8 +22,8 @@ moveit_simple_controller_manager:
     default: true
   astra_right_hand_controller:
     type: GripperCommand
-    # https://github.com/moveit/moveit2/issues/2837
-    # joints:
-    #   []
+    joints:
+      - joint_r7l
+      - joint_r7r
     action_ns: gripper_cmd
     default: true
