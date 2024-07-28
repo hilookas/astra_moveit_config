@@ -8,7 +8,7 @@ controller_manager:
 
 
     astra_right_hand_controller:
-      type: position_controllers/GripperActionController
+      type: joint_trajectory_controller/JointTrajectoryController
 
 
     joint_state_broadcaster:
@@ -33,3 +33,8 @@ astra_right_hand_controller:
     joints:
       - joint_r7l
       - joint_r7r
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
